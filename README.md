@@ -4,7 +4,7 @@ Includes fps stats in raf loop
 
 ## Instructions
 
-Clone and serve!
+https://cfebs.github.io/threejsperf/ or Clone and serve!
 
 ## References
 
