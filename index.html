@@ -25,12 +25,26 @@
 			a {
 				color: #ffffff;
 			}
+
+            #fullscreen {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: white;
+                background: #222;
+                padding: 1rem;
+                border: 0;
+                cursor: pointer;
+            }
 		</style>
 	</head>
 	<body>
 
 		<div id="container"></div>
+        <button type="button" id="fullscreen">toggle fullscreen</button>
 
+        <script src="./threejsperf/bigscreen.min.js"></script>
         <script src="./threejsperf/stats.min.js"></script>
 		<script src="./threejsperf/three.min.js"></script>
 
@@ -181,6 +195,14 @@
 
 			}
 
+            document.getElementById('fullscreen').addEventListener('click', function() {
+                if (BigScreen.enabled) {
+                    BigScreen.toggle();
+                }
+                else {
+                    // fallback
+                }
+            }, false);
 		</script>
 	</body>
 </html>
